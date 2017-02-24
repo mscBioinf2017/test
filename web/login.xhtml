@@ -13,15 +13,15 @@
             <h:form>
                 <h:panelGrid columns="2">
                     <p:outputLabel for="login_input" value="Login:" />
-                    <p:inputText value="" id="login_input" required="true"
+                    <p:inputText value="#{authentificationBean.newUser.login}" id="login_input" required="true"
                                    requiredMessage="The login field is required." />
                     
                     <p:outputLabel for="pass_input" value="Password:" />
-                    <p:password value="" id="pass_input" required="true" 
+                    <p:password value="#{authentificationBean.newUser.password}" id="pass_input" required="true" 
                                   requiredMessage="The password field is required." />
                     
                     <!-- TODO: log in action for command button -->
-                    <br/><p:commandButton value="Sign in" />
+                    <br/><p:commandButton value="Sign in" action="#{authentificationBean.logIn()}"/>
                 </h:panelGrid>
             </h:form>
             
@@ -29,7 +29,7 @@
                 <h:panelGrid columns="2">
                     <p:outputLabel value="Not a member?" for="registerlink" />
                     <p:commandLink id="registerlink"
-                                    value="Register" action="register" /> 
+                                    value="Registration page" action="register" /> 
                 </h:panelGrid>
             </h:form>
         </p:panel>
