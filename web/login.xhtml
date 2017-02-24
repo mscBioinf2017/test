@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>AuthentiApp - Log in</title>
+    </h:head>
+    <h:body>
+        <p:panel header="Enter your user credentials" style="width: 400px;">
+            <p:messages id="messages" showDetail="false"
+                          autoUpdate="true" closable="true" />
+            <h:form>
+                <h:panelGrid columns="2">
+                    <p:outputLabel for="login_input" value="Login:" />
+                    <p:inputText value="" id="login_input" required="true"
+                                   requiredMessage="The login field is required." />
+                    
+                    <p:outputLabel for="pass_input" value="Password:" />
+                    <p:password value="" id="pass_input" required="true" 
+                                  requiredMessage="The password field is required." />
+                    
+                    <!-- TODO: log in action for command button -->
+                    <br/><p:commandButton value="Sign in" />
+                </h:panelGrid>
+            </h:form>
+            
+            <h:form>
+                <h:panelGrid columns="2">
+                    <p:outputLabel value="Not a member?" for="registerlink" />
+                    <p:commandLink id="registerlink"
+                                    value="Register" action="register" /> 
+                </h:panelGrid>
+            </h:form>
+        </p:panel>
+    </h:body>
+</html>

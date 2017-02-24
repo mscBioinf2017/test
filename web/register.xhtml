@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>AuthentiApp - Registration</title>
+    </h:head>
+    <h:body>
+        <p:panel header="Enter your account information" style="width: 600px;">
+            <h:form id="register_form">
+                <p:messages id="messages" showDetail="false" autoUpdate="true" closable="true" />
+
+                <h:panelGrid columns="3">
+                    <p:outputLabel value="Login: " /><p:spacer width="20"/>
+                    <p:inputText value="" required="true" requiredMessage="The login field is required." />
+
+                    <h:outputLabel for="pwd1" value="Password: " /><br/>
+                    <p:password id="pwd1" value="" match="pwd2" label="Password 1" required="true" feedback="true"/>  
+                    <p:outputLabel for="pwd2" value="Repeat password: " /><br />
+                    <p:password id="pwd2" label="Password 2" required="true"/>
+
+                    <h:outputText value="First name: " /><br />
+                    <p:inputText value="" required="true" requiredMessage="The first name field is required." />
+                    <h:outputText value="Last name: " /><br />
+                    <p:inputText value="" required="true" requiredMessage="The last name field is required." />
+                </h:panelGrid>
+
+                <!-- TODO: add registration action action -->
+                <p:commandButton id="submitButton" value="Submit registration form" icon="ui-icon-disk" />
+            </h:form>
+            
+            <h:form>
+                <br />
+                You already have an account? <p:commandLink value="Click here to log in" action="login" />  
+            </h:form>
+        </p:panel>
+    </h:body>
+</html>
