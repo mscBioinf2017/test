@@ -13,21 +13,21 @@
 
                 <h:panelGrid columns="3">
                     <p:outputLabel value="Login: " /><p:spacer width="20"/>
-                    <p:inputText value="#{authentificationBean.newUser.login}" required="true" requiredMessage="The login field is required." />
+                    <p:inputText value="" required="true" requiredMessage="The login field is required." />
 
                     <h:outputLabel for="pwd1" value="Password: " /><br/>
-                    <p:password id="pwd1" value="#{authentificationBean.newUser.password}" match="pwd2" label="Password 1" required="true" feedback="true"/>  
+                    <p:password id="pwd1" value="" match="pwd2" label="Password 1" required="true" feedback="true"/>  
                     <p:outputLabel for="pwd2" value="Repeat password: " /><br />
                     <p:password id="pwd2" label="Password 2" required="true"/>
 
                     <h:outputText value="First name: " /><br />
-                    <p:inputText value="#{authentificationBean.newUser.firstname}" required="true" requiredMessage="The first name field is required." />
+                    <p:inputText value="" required="true" requiredMessage="The first name field is required." />
                     <h:outputText value="Last name: " /><br />
-                    <p:inputText value="#{authentificationBean.newUser.lastname}" required="true" requiredMessage="The last name field is required." />
+                    <p:inputText value="" required="true" requiredMessage="The last name field is required." />
                 </h:panelGrid>
 
                 <!-- TODO: add registration action action -->
-                <p:commandButton id="submitButton" value="Submit registration form" icon="ui-icon-disk" action="#{authentificationBean.register}"/>
+                <p:commandButton id="submitButton" value="Submit registration form" icon="ui-icon-disk" />
             </h:form>
             
             <h:form>

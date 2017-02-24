@@ -2,61 +2,17 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:h="http://xmlns.jcp.org/jsf/html"
-      xmlns:p="http://primefaces.org/ui"
-      xmlns:f="http://xmlns.jcp.org/jsf/core">
+      xmlns:p="http://primefaces.org/ui">
     <h:head>
         <title>AuthentiApp</title>
     </h:head>
     <h:body>
         <p:panel header="Placeholder">
             <h:outputText value="Once we're done this should only be accessible to logged in users." /><br />
-            <h:outputText value="#{authentificationBean.getWelcomeMessage()}" /><br />
             <h:outputText value="Check these other pages out:" /><br />
-            
-            <f:view>
-
-
-                <h:form>
-                    <h1><h:outputText value="List"/></h1>
-                    <p:dataTable value="#{authentificationBean.users}" var="item">
-                        <p:column>
-                            <f:facet name="header">
-                                <h:outputText value="UserId"/>
-                            </f:facet>
-                            <h:outputText value="#{item.userId}"/>
-                        </p:column>
-                        <p:column>
-                            <f:facet name="header">
-                                <h:outputText value="Login"/>
-                            </f:facet>
-                            <h:outputText value="#{item.login}"/>
-                        </p:column>
-                        <p:column>
-                            <f:facet name="header">
-                                <h:outputText value="Firstname"/>
-                            </f:facet>
-                            <h:outputText value="#{item.firstname}"/>
-                        </p:column>
-                        <p:column>
-                            <f:facet name="header">
-                                <h:outputText value="Lastname"/>
-                            </f:facet>
-                            <h:outputText value="#{item.lastname}"/>
-                        </p:column>
-                        <p:column>
-                            <f:facet name="header">
-                                <h:outputText value="Password"/>
-                            </f:facet>
-                            <h:outputText value="#{item.password}"/>
-                        </p:column>
-                    </p:dataTable>
-                </h:form>
-            </f:view>
-
             <h:form>
                 <p:commandLink value="Login page" action="login" /><br />
-                <p:commandLink value="Registration page" action="register" /><br />
-                <p:commandLink value="Log out" action="#{authentificationBean.logOut}" />
+                <p:commandLink value="Registration page" action="register" />
             </h:form>
         </p:panel>
     </h:body>
